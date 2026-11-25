@@ -1,0 +1,1121 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: #25231f;
+  background: #fffefa;
+}
+
+.district-app {
+  width: 100%;
+  overflow: hidden;
+}
+
+.navbar {
+  height: 82px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fffefa;
+  border-bottom: 1px solid #eeeae3;
+
+  position: static;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 99999;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: #29251f;
+  text-decoration: none;
+  letter-spacing: -1.5px;
+}
+
+.logo span {
+  color: #b44e39;
+}
+
+.nav-links {
+  display: flex;
+  gap: 38px;
+}
+
+.nav-links a {
+  color: #514d47;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: #b44e39;
+}
+
+.login-btn {
+  background: #29251f;
+  color: white;
+  padding: 12px 27px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hero {
+  padding: 65px 8%;
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  align-items: center;
+  gap: 55px;
+  background: #f7f3ec;
+}
+
+.hero-content {
+  max-width: 530px;
+}
+
+.eyebrow,
+.section-heading > div > span,
+.search-heading > span,
+.how-section > span {
+  color: #b44e39;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(42px, 5vw, 65px);
+  line-height: 1.15;
+  margin: 24px 0;
+  color: #29251f;
+}
+
+.hero h1 span {
+  color: #b44e39;
+}
+
+.hero-content > p {
+  color: #777168;
+  font-size: 16px;
+  line-height: 1.9;
+  max-width: 440px;
+  margin-bottom: 30px;
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #b44e39;
+  color: white;
+  text-decoration: none;
+  padding: 15px 24px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.hero-btn:hover,
+.book-btn:hover {
+  background: #913b2b;
+}
+
+.hero-image {
+  height: 440px;
+  position: relative;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.floating-card {
+  position: absolute;
+  left: -30px;
+  bottom: 25px;
+  background: white;
+  padding: 18px;
+  border-radius: 7px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  box-shadow: 0 8px 30px #00000016;
+  color: #b44e39;
+}
+
+.floating-card strong,
+.floating-card span {
+  display: block;
+}
+
+.floating-card strong {
+  color: #29251f;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.floating-card span {
+  color: #777;
+  font-size: 11px;
+}
+
+.search-section {
+  padding: 65px 8% 35px;
+  text-align: center;
+}
+
+.search-heading h2,
+.section-heading h2,
+.how-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  margin: 12px 0;
+  color: #29251f;
+}
+
+.search-box {
+  max-width: 750px;
+  margin: 30px auto 0;
+  height: 64px;
+  padding: 7px 9px 7px 20px;
+  border: 1px solid #e9e2d8;
+  border-radius: 6px;
+  background: white;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: #938a7d;
+}
+
+.search-box input {
+  flex: 1;
+  width: 0;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+  color: #29251f;
+}
+
+.search-box button {
+  background: #b44e39;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.restaurants-section {
+  padding: 45px 8% 85px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 15px;
+}
+
+.section-heading h2 {
+  margin-bottom: 7px;
+}
+
+.section-heading p {
+  font-size: 14px;
+  color: #858078;
+}
+
+.restaurant-count {
+  font-size: 13px;
+  color: #777;
+  padding-bottom: 8px;
+}
+
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 30px 0;
+}
+
+.category {
+  background: white;
+  border: 1px solid #e8e1d8;
+  color: #5f5a52;
+  padding: 10px 19px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.category.active,
+.category:hover {
+  background: #29251f;
+  color: white;
+  border-color: #29251f;
+}
+
+.restaurant-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.restaurant-card {
+  background: white;
+  border: 1px solid #eee9e2;
+  border-radius: 7px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px #0000000c;
+}
+
+.restaurant-image {
+  height: 210px;
+  position: relative;
+}
+
+.restaurant-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.favourite-btn {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 37px;
+  height: 37px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  color: #555;
+}
+
+.favourite-btn:hover {
+  color: #b44e39;
+}
+
+.image-label {
+  position: absolute;
+  bottom: 12px;
+  left: 13px;
+  background: #b44e39;
+  color: white;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 7px 10px;
+  border-radius: 3px;
+}
+
+.restaurant-info {
+  padding: 19px;
+}
+
+.restaurant-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+}
+
+.restaurant-title h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 19px;
+}
+
+.rating {
+  background: #edf5e9;
+  color: #34723d;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 7px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.cuisine {
+  color: #827c72;
+  font-size: 12px;
+  margin: 10px 0 15px;
+}
+
+.location {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  color: #777;
+  font-size: 12px;
+}
+
+.restaurant-meta {
+  border-top: 1px solid #eeeae3;
+  border-bottom: 1px solid #eeeae3;
+  margin: 17px 0;
+  padding: 13px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  color: #777;
+  font-size: 11px;
+}
+
+.restaurant-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.book-btn {
+  width: 100%;
+  padding: 13px;
+  background: #b44e39;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 55px 15px;
+  color: #777;
+}
+
+.no-results h3 {
+  margin: 12px;
+  color: #29251f;
+}
+
+.no-results p {
+  font-size: 13px;
+}
+
+.no-results button {
+  margin-top: 20px;
+  padding: 11px 20px;
+  background: #29251f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.how-section {
+  background: #f7f3ec;
+  text-align: center;
+  padding: 70px 8%;
+}
+
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.how-grid > div {
+  background: white;
+  padding: 35px 25px;
+  border-radius: 6px;
+  color: #b44e39;
+}
+
+.how-grid h3 {
+  color: #29251f;
+  margin: 18px 0 10px;
+  font-family: 'Playfair Display', serif;
+  font-size: 21px;
+}
+
+.how-grid p {
+  color: #777;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.footer {
+  background: #29251f;
+  padding: 45px 8%;
+  text-align: center;
+  color: #c9c2b8;
+}
+
+.footer .logo {
+  color: white;
+}
+
+.footer p {
+  margin: 15px 0;
+  font-size: 13px;
+}
+
+.footer > span {
+  font-size: 11px;
+  color: #a69e92;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .hero {
+    padding: 50px 5%;
+    gap: 30px;
+  }
+
+  .hero-image {
+    height: 350px;
+  }
+
+  .restaurants-section,
+  .search-section {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .restaurant-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    height: 70px;
+  }
+
+  .logo {
+    font-size: 29px;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 25px;
+    background: white;
+    flex-direction: column;
+    gap: 22px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .login-btn {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 45px 6%;
+  }
+
+  .hero h1 {
+    font-size: 46px;
+  }
+
+  .hero-image {
+    height: 280px;
+  }
+
+  .floating-card {
+    left: 10px;
+    bottom: 12px;
+  }
+
+  .search-section {
+    padding-top: 45px;
+  }
+
+  .search-heading h2,
+  .section-heading h2,
+  .how-section h2 {
+    font-size: 27px;
+  }
+
+  .search-box {
+    height: 56px;
+    gap: 8px;
+    padding-left: 12px;
+  }
+
+  .search-box input {
+    font-size: 11px;
+  }
+
+  .search-box button {
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .restaurants-section {
+    padding-top: 30px;
+  }
+
+  .section-heading {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .restaurant-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .restaurant-image {
+    height: 220px;
+  }
+
+  .how-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* BOOKING MODAL */
+
+.booking-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 20000;
+  background: rgba(25, 22, 19, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.booking-modal {
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #fffefa;
+  padding: 65px 35px 35px;
+  border-radius: 9px;
+  position: relative;
+}
+
+.close-booking {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 10;
+  margin-left: auto;
+  margin-bottom: -40px;
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+
+  color: #333;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.close-booking:hover {
+  background: #f1e8e8;
+}
+
+.booking-eyebrow {
+  color: #b44e39;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.booking-modal h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  margin: 12px 0;
+  color: #29251f;
+}
+
+.booking-restaurant-name {
+  color: #b44e39;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.booking-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.booking-modal form label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #514d47;
+  margin-top: 8px;
+}
+
+.booking-modal form input,
+.booking-modal form select {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #e6ded3;
+  border-radius: 5px;
+  background: white;
+  color: #29251f;
+  font-family: inherit;
+  outline-color: #b44e39;
+}
+
+.confirm-booking {
+  margin-top: 15px;
+}
+
+.booking-success {
+  text-align: center;
+}
+
+.success-icon {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: #e6f3e6;
+  color: #348144;
+  font-size: 35px;
+  display: grid;
+  place-items: center;
+  margin: 10px auto 20px;
+}
+
+.booking-success > p {
+  color: #777;
+  font-size: 13px;
+}
+
+.confirmation-details {
+  background: #f7f3ec;
+  padding: 20px;
+  border-radius: 6px;
+  margin: 25px 0;
+  text-align: left;
+}
+
+.confirmation-details h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 12px;
+}
+
+.confirmation-details p {
+  font-size: 13px;
+  color: #665f55;
+  margin: 10px 0;
+  overflow-wrap: anywhere;
+}
+
+.booking-success .book-btn {
+  margin-top: 10px;
+}
+
+.food-menu-section {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #e6ded3;
+}
+
+.food-menu-section h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 23px;
+  margin-bottom: 5px;
+}
+
+.food-menu-section > p {
+  color: #777;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.food-menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid #eee5da;
+  gap: 15px;
+}
+
+.food-menu-item strong {
+  font-size: 14px;
+}
+
+.food-menu-item p {
+  font-size: 12px;
+  color: #888;
+  margin: 5px 0;
+}
+
+.food-menu-item span {
+  font-weight: 700;
+  color: #b44e39;
+}
+
+.food-menu-item button {
+  background: #b44e39;
+  color: white;
+  border: none;
+  padding: 9px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cart-section {
+  margin-top: 25px;
+  padding: 18px;
+  background: #f7f3ec;
+  border-radius: 8px;
+}
+
+.cart-section h3 {
+  margin-bottom: 15px;
+}
+
+.cart-item,
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 13px;
+}
+
+.cart-total {
+  border-top: 1px solid #ddd;
+  margin-top: 10px;
+  padding-top: 15px;
+  font-size: 15px;
+}
+
+.checkout-section {
+  margin-top: 20px;
+  padding: 18px;
+  background: #fff5ed;
+  border-radius: 8px;
+}
+
+.checkout-section h3 {
+  margin-bottom: 15px;
+}
+
+.checkout-section label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.checkout-section select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e6ded3;
+  border-radius: 5px;
+  background: white;
+}
+
+.checkout-section button {
+  width: 100%;
+}
+
+.my-bookings-section {
+  padding: 75px 8%;
+  background: #f8f5ef;
+}
+
+.my-bookings-section .section-heading {
+  margin-bottom: 30px;
+}
+
+.my-bookings-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.my-booking-card {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #eee5da;
+}
+
+.my-booking-card h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 15px;
+}
+
+.my-booking-card p {
+  font-size: 13px;
+  margin: 10px 0;
+  color: #625c53;
+}
+
+.booking-status {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 7px 12px;
+  background: #e6f3e6;
+  color: #348144;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.no-bookings {
+  color: #777;
+}
+.my-orders-section {
+  padding: 75px 8%;
+  background: #fffefa;
+}
+
+.my-orders-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.my-order-card {
+  padding: 25px;
+  background: #f8f5ef;
+  border: 1px solid #eee5da;
+  border-radius: 8px;
+}
+
+.my-order-card h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 15px;
+}
+
+.my-order-card h4 {
+  margin-top: 18px;
+}
+
+.my-order-card p {
+  font-size: 13px;
+  margin: 10px 0;
+  color: #625c53;
+}
+body{
+  padding-top:82px;
+}
+/* Fix booking modal close button */
+
+.booking-modal {
+  position: relative;
+}
+
+.close-booking {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 1000;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f5eeee;
+  color: #333;
+  border: none;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.close-booking:hover {
+  background: #e8dada;
+}
+/* Sign In Modal */
+
+.signin-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 30000;
+  background: rgba(25, 22, 19, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.signin-modal {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  background: #fffefa;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.signin-modal h2 {
+  color: #641e2b;
+  margin-bottom: 10px;
+}
+
+.signin-modal p {
+  color: #777;
+  margin-bottom: 25px;
+}
+
+.signin-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #555;
+}
+
+.signin-modal label {
+  display: block;
+  margin: 15px 0 8px;
+  color: #333;
+  font-weight: 600;
+}
+
+.signin-modal input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.password-field {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.password-field input {
+  padding-right: 45px;
+}
+
+.password-field button {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.signin-submit {
+  width: 100%;
+  padding: 13px;
+  margin-top: 25px;
+  background: #641e2b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.signin-error {
+  color: red !important;
+  margin-top: 10px;
+  margin-bottom: 0 !important;
+}
+
+.signup-text {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.signup-text span {
+  color: #641e2b;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.signin-nav-btn {
+  background: #641e2b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.signup-text button {
+  background: none;
+  border: none;
+  color: #641e2b;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: inherit;
+}
